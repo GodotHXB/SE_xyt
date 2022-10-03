@@ -52,3 +52,11 @@ def nextStep(ownBoard,otherBoard,figure):
             break
 
     return index
+
+
+def nextStep1(ownBoard,otherBoard,figure):
+    # 纯随机，测试用
+    index = random.randint(0,8)
+    while ownBoard[index] != 0:
+        index = random.randint(0,8)
+    return index
