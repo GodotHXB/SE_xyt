@@ -2,6 +2,7 @@ import settings
 import ai
 from local_competition import *
 
+
 def print_welcome_msg():
     print('''
     欢迎来到逍遥骰
@@ -12,7 +13,7 @@ def print_welcome_msg():
     ''')
 
 
-if __name__ == '__main__':
+def main():
     print_welcome_msg()
     mode = int(input('请输入想选择的模式：'))
     if mode == 1:
@@ -22,5 +23,8 @@ if __name__ == '__main__':
     if mode == 3:
         pass
 
+
+if __name__ == '__main__':
+    main()
 
 
