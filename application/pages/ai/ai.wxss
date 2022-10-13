@@ -1,0 +1,7 @@
+.view{
+  position:absolute;
+  left: 17%;
+  top: 17%;
+  font-size: 70rpx;
+}
+

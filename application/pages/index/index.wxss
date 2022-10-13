@@ -1,0 +1,52 @@
+/**index.wxss**/
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+
+.view1{
+  position: absolute;
+  width: auto;
+  height: 600rpx;
+  left: 12%;
+  top: 14%;
+
+}
+
+.view1::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.btn1 {
+  position: absolute;
+  left: 26%;
+  top: 60%;
+  width: 80%;
+
+  background-color: #1F7CBF;
+  color: white;
+  border-radius: 98rpx;
+  /* background-image: url(/image/按钮.png); */
+}
+
+.btn1-hover-class{
+  background-color:rgba(31, 124, 191, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+}

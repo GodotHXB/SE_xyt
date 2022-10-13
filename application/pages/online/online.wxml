@@ -1,0 +1,9 @@
+<view>
+  <view>
+    <!-- <view>{{inputValue}}</view> -->
+    <input class="input" type="number" placeholder="请输入房间号" bindinput="bindKeyInput" adjust-position="true" maxlength="5"/>
+  </view>
+  <view>
+    <button class="btn-local" hover-class="hover_class" bindtap="btn">进入房间</button>
+  </view>
+</view>

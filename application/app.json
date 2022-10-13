@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mode/mode",
+    "pages/local/local",
+    "pages/ai/ai",
+    "pages/online/online",
+    "pages/local/end/end",
+    "pages/ai/easy/easy",
+    "pages/ai/easy/end/end",
+    "pages/online/battle/battle",
+    "pages/online/battle/end/end",
+    "pages/ai/hard/hard",
+    "pages/ai/hard/end/end",
+    "pages/ai/medium/medium",
+    "pages/ai/medium/end/end"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "逍遥骰",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
