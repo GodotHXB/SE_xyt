@@ -1,5 +1,4 @@
 import settings
-import ai
 from local_competition import *
 
 

@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
 import random
-from ai import nextStep
+from ai import nextStep,nextStep1
 import json
 import re
+
+# nohup python xxx.py
 
 app = Flask(__name__)
 
@@ -22,8 +24,8 @@ app = Flask(__name__)
 def random_num():
     return random.randint(1,50)
 
-@app.route('/<board>')
-def index(board):
+@app.route('/hard/<board>')
+def index_hard(board):
     ownBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     otherBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     figure = 0
@@ -46,6 +48,29 @@ def index(board):
     index = nextStep(ownBoard,otherBoard,figure)
     return str(index)
 
+@app.route('/mid/<board>')
+def index_mid(board):
+    ownBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    otherBoard = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    figure = 0
+
+    boards = re.findall("\[.*?\]", board)
+
+    index = 0
+    nums = re.findall('[0-6]',boards[0])
+    for index in range(0,9):
+        ownBoard[index] = int(nums[index])
+
+    index = 0
+    nums = re.findall('[0-6]',boards[1])
+    for index in range(0,9):
+        otherBoard[index] = int(nums[index])
+
+    num = re.findall('[0-6]', boards[2])
+    figure = int(num[0])
+
+    index = nextStep1(ownBoard,otherBoard,figure)
+    return str(index)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=9999, debug=True)

@@ -120,7 +120,6 @@ def start_game_ai():
         elif flag == 0:
             winB += 1
 
-
     print('winA = ', winA)
     print('winB = ', winB)
 
