@@ -1,6 +1,5 @@
 import random
 
-
 def score_process(ownBoard, otherBoard, start, end, own_score, other_score):
     # 按行结算分数
     countA = [0,0,0,0,0,0,0]
@@ -18,6 +17,7 @@ def score_process(ownBoard, otherBoard, start, end, own_score, other_score):
 
 def calculate_row(ownBoard, otherBoard, start, end, figure, type='greedy'):
     # 计算我方某行得分与某行已放置的骰子数
+    # 最后一个参数type代表决策类型，greedy = 贪婪， conservative = 保守
     count_own = [0,0,0,0,0,0,0] # ownBoard上某行某个数字出现的次数
     count_other = [0,0,0,0,0,0,0] # otherBoard上某行某个数字出现的次数
     count = 0
@@ -62,6 +62,7 @@ def place_dice(ownBoard,start,end):
 
 
 def nextStep(ownBoard,otherBoard,figure):
+    # 最终版本
     index = -1 # 要返回的放置位置，初始置-1
     # 初始化，用于记录数值
     k_score = 0 # 放置在k行取得的净胜分
