@@ -4,9 +4,9 @@
   width: auto;
   height: 300rpx;
   margin: 0 auto;
-  color: #C938BB;
+  color: #1F7CBF;
   font-size: 80rpx;
-  font-family:cursive;
+  font-weight: 100%;
   /* background-color: white; */
 }
 
@@ -22,7 +22,7 @@
   width: 80%;
   height: 100rpx;
   margin-top:150rpx;
-  background-color: #FDA2CB;
+  background-color: #1F7CBF;
   color: white;
   border-radius: 98rpx;
   font-size: large;
@@ -37,7 +37,7 @@
   width: 80%;
   height: 100rpx;
   margin-top:80rpx;
-  background-color: #FDA2CB;
+  background-color: #1F7CBF;
   color: white;
   border-radius: 98rpx;
   font-size: large;
@@ -52,7 +52,7 @@
   width: 80%;
   height: 100rpx;
   margin-top:80rpx;
-  background-color: #FDA2CB;
+  background-color: #1F7CBF;
   color: white;
   border-radius: 98rpx;
   font-size: large;

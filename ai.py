@@ -129,41 +129,41 @@ def nextStep_random(ownBoard,otherBoard,figure):
     return index
 
 
-# def nextStep1(ownBoard,otherBoard,figure):
-#     # 一号机
-#     # 初始化，用于记录数值
-#     k_score = 0 # 放置在k行取得的净胜分
-#     e_score = 0 # 放置在e行取得的净胜分
-#     x_score = 0 # 放置在x行取得的净胜分
-#     k_count = 0 # 放置在k行的骰子数
-#     e_count = 0 # 放置在e行的骰子数
-#     x_count = 0 # 放置在x行的骰子数
-#     index = -1
-#
-#     # 处理K线
-#     k_score,k_count = calculate_row(ownBoard, otherBoard, 0, 3, figure)
-#     e_score,e_count = calculate_row(ownBoard, otherBoard, 3, 6, figure)
-#     x_score,x_count = calculate_row(ownBoard, otherBoard, 6, 9, figure)
-#     # print('k_score = ', k_score,',e_score = ', e_score,',x_score = ',x_score)
-#
-#     # 建立dict，按照value值对净胜分进行排序，由高到低进行选择
-#     scores = {'k':k_score,'e':e_score,'x':x_score}
-#     scores_list = sorted(scores.items(), key=lambda s: s[1], reverse=True)
-#     # print(scores_list)
-#
-#     for score in scores_list:
-#         if score[0] == 'k':
-#             index = place_dice(ownBoard, 0, 3)
-#         elif score[0] == 'e':
-#             index = place_dice(ownBoard, 3, 6)
-#         elif score[0] == 'x':
-#             index = place_dice(ownBoard, 6, 9)
-#         # 找到最优位置，中止循环
-#         if index != -1:
-#             break
-#
-#     return index
-#
+def nextStep1(ownBoard,otherBoard,figure):
+    # 一号机
+    # 初始化，用于记录数值
+    k_score = 0 # 放置在k行取得的净胜分
+    e_score = 0 # 放置在e行取得的净胜分
+    x_score = 0 # 放置在x行取得的净胜分
+    k_count = 0 # 放置在k行的骰子数
+    e_count = 0 # 放置在e行的骰子数
+    x_count = 0 # 放置在x行的骰子数
+    index = -1
+
+    # 处理K线
+    k_score,k_count = calculate_row(ownBoard, otherBoard, 0, 3, figure)
+    e_score,e_count = calculate_row(ownBoard, otherBoard, 3, 6, figure)
+    x_score,x_count = calculate_row(ownBoard, otherBoard, 6, 9, figure)
+    # print('k_score = ', k_score,',e_score = ', e_score,',x_score = ',x_score)
+
+    # 建立dict，按照value值对净胜分进行排序，由高到低进行选择
+    scores = {'k':k_score,'e':e_score,'x':x_score}
+    scores_list = sorted(scores.items(), key=lambda s: s[1], reverse=True)
+    # print(scores_list)
+
+    for score in scores_list:
+        if score[0] == 'k':
+            index = place_dice(ownBoard, 0, 3)
+        elif score[0] == 'e':
+            index = place_dice(ownBoard, 3, 6)
+        elif score[0] == 'x':
+            index = place_dice(ownBoard, 6, 9)
+        # 找到最优位置，中止循环
+        if index != -1:
+            break
+
+    return index
+
 # def nextStep2(ownBoard,otherBoard,figure):
 #     # 二号机，目前最优
 #     # 初始化，用于记录数值

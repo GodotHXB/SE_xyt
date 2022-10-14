@@ -26,6 +26,7 @@ Page({
     var flag = this.data.temp;
     if((this.data.flg==0 & e.currentTarget.dataset.id<=9) || (this.data.flg==1 & e.currentTarget.dataset.id>9)) return
     else if(flag=='') return
+    else if(this.data.num[e.currentTarget.dataset.id].fl!=0) return
     else if(this.data.flg==0){
       this.setData({
         ['flg']:1
@@ -58,8 +59,6 @@ Page({
       }
       this.set(e.currentTarget.dataset.id);
     }
-    // console.log(this.data.count[0],this.data.count[1]);
-    
   },
   set:function(id){
     this.setData({
@@ -115,6 +114,7 @@ Page({
       this.data.cnt[this.data.num[i].number]++
     }
     for(var i=1;i<=6;i++){
+      console.log(this.data.cnt[i]);
       if(this.data.cnt[i]>0){
         app.score[t]+=this.data.cnt[i]*this.data.cnt[i]*i
         this.setData({

@@ -2,15 +2,15 @@
 <view>
   <view class="view">请选择游戏难度</view>
   <view style="position: absolute; left: 13%; top: 35%;">
-    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(243, 225, 225); border-radius: 45rpx;" bindtap="btn1">简单</button>
+    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(220, 213, 255); border-radius: 45rpx;" bindtap="btn1">简单</button>
   </view>
   <view style="position: absolute; left: 55%; top: 35%;">
-    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(240, 151, 151); border-radius: 45rpx;" bindtap="btn_medium">中等</button>
+    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(164, 174, 255); border-radius: 45rpx;" bindtap="btn_medium">中等</button>
   </view>
   <view style="position: absolute; left: 13%; top: 50%;">
-    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(247, 85, 112); border-radius: 45rpx;" bindtap="btn_hard">困难</button>
+    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(116, 113, 255); border-radius: 45rpx;" bindtap="btn_hard">困难</button>
   </view>
   <view style="position: absolute; left: 55%; top: 50%;">
-    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(255, 0, 43); border-radius: 45rpx;" bindtap="btn1">噩梦</button>
+    <button style="width: 250rpx; font-size: 60rpx; background-color: rgb(47, 0, 255); border-radius: 45rpx;" bindtap="btn1">噩梦</button>
   </view>
 </view>

@@ -7,12 +7,18 @@ Page({
   },
   btn_medium:function(){
     wx.navigateTo({
-      url: '../ai/medium/medium'
+      url: '../ai/easy/easy'
     })
+    // wx.navigateTo({
+    //   url: '../ai/medium/medium'
+    // })
   },
   btn_hard:function(){
     wx.navigateTo({
-      url: '../ai/hard/hard'
+      url: '../ai/easy/easy'
     })
+    // wx.navigateTo({
+    //   url: '../ai/hard/hard'
+    // })
   }
 })

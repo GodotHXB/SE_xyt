@@ -29,6 +29,7 @@
   <view class="view_fengexian">
     <view ></view>
   </view>
+  
   <view>
     <view>
       <view class="position" style="left: 253rpx; top: 870rpx;" hover-class="hover" hover-stay-time="0" bindtap="setdata" data-id="10">{{num[10].number}}</view>

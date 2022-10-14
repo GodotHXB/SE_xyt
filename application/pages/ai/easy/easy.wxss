@@ -106,7 +106,7 @@
 .view_fengexian view{
   width: 100%;
   height: 10rpx;
-  background: linear-gradient(to right, #eba2e5, #eba2e5);
+  background: linear-gradient(to right, #788ce6, #788ce6);
 }
 
 .moving_dice_view{

@@ -28,6 +28,7 @@ Page({
     var flag = this.data.temp;
     if((this.data.flg==0 & e.currentTarget.dataset.id<=9) || (this.data.flg==1 & e.currentTarget.dataset.id>9)) return
     else if(flag=='') return
+    else if(this.data.num[e.currentTarget.dataset.id].fl!=0) return
     else if(this.data.flg==0){
       this.setData({
         ['flg']:1
@@ -50,10 +51,15 @@ Page({
       this.setData({
         ['num['+e.currentTarget.dataset.id+'].number']:flag,
         ['dflag']:0,
-        ['mdice[0]']:'',
-        ['num['+e.currentTarget.dataset.id+'].fl']:1,
-        ['count['+i+']']:t+1
+        ['mdice[0]']:''
       })
+      if(1){
+        this.setData({
+          ['num['+e.currentTarget.dataset.id+'].fl']:1,
+          ['count['+i+']']:t+1
+        })
+      }
+      this.set(e.currentTarget.dataset.id);
     }
     this.set_ai(e);
   },
@@ -93,7 +99,7 @@ Page({
     return new Promise(()=>{
       var app = getApp();
       wx.request({
-        url: 'http://127.0.0.1:9999/'+'['+app.data_num1+']'+'['+app.data_num2+']'+'['+this.data.temp+']',
+        url: 'http://120.27.212.235:9999/'+'['+app.data_num1+']'+'['+app.data_num2+']'+'['+this.data.temp+']',
         method: 'GET',
         header: {
           'Content-Type': 'application/json' // 默认值

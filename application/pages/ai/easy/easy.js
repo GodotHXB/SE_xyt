@@ -26,6 +26,7 @@ Page({
     var flag = this.data.temp;
     if((this.data.flg==0 & e.currentTarget.dataset.id<=9) || (this.data.flg==1 & e.currentTarget.dataset.id>9)) return
     else if(flag=='') return
+    else if(this.data.num[e.currentTarget.dataset.id].fl!=0) return
     else if(this.data.flg==0){
       this.setData({
         ['flg']:1
@@ -50,13 +51,15 @@ Page({
         ['dflag']:0,
         ['mdice[0]']:''
       })
-      this.setData({
-        ['num['+e.currentTarget.dataset.id+'].fl']:1,
-        ['count['+i+']']:t+1
-      })
+      if(1){
+        this.setData({
+          ['num['+e.currentTarget.dataset.id+'].fl']:1,
+          ['count['+i+']']:t+1
+        })
+      }
       this.set(e.currentTarget.dataset.id);
-      this.setdata_ai();
     }
+    if(this.data.count[0]!=9 && this.data.count[1]!=9) this.setdata_ai();
   },
   setdice2:function(){
     var a = Math.floor(Math.random()*6+1);
@@ -80,10 +83,12 @@ Page({
         ['dflag']:0,
         ['mdice[0]']:''
       })
-      this.setData({
-        ['num['+index+'].fl']:1,
-        ['count[0]']:this.data.count[0]+1
-      })
+      if(1){
+        this.setData({
+          ['num['+index+'].fl']:1,
+          ['count[0]']:this.data.count[0]+1
+        })
+      }
       this.set(index);
     }
   },
@@ -140,13 +145,13 @@ Page({
       this.data.cnt[this.data.num[i].number]++
     }
     for(var i=1;i<=6;i++){
+      // console.log('begin:'+begin+' end:'+end+' t:'+t+' i:'+i+' data1:'+this.data.cnt[i])
       if(this.data.cnt[i]>0){
         app.score[t]+=this.data.cnt[i]*this.data.cnt[i]*i
-        // console.log(this.data.cnt[i],i)
         this.setData({
           ['cnt['+i+']']:0
         })
-        console.log(this.data.cnt[i])
+        console.log('data2:'+this.data.cnt[i])
       }
     }
   },

@@ -6,4 +6,6 @@
   <view>
     <button class="btn-local" hover-class="hover_class" bindtap="btn">进入房间</button>
   </view>
+
+
 </view>
